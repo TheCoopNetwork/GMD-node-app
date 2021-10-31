@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "George A"
+    "name": "The Coop Network"
   },
   "license": "MIT",
   "config": {
@@ -25,7 +25,9 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "gmd_hot_wallet"
+            "name": "gmd_node",
+            "iconUrl": "https://node.thecoopnetwork.io:8443/img/logo.ico",
+            "loadingGif": "splash.gif"
           }
         },
         {
@@ -47,7 +49,6 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "electron": "15.3.0",
     "electron-log": "4.4.1"
   },
   "devDependencies": {
