@@ -7,6 +7,18 @@ const log = require('electron-log');
 var my_url = 'http://localhost:6876';
 let tray = null;
 
+var AutoLaunch = require('auto-launch');
+try {
+	var gmdNodeLauncher = new AutoLaunch({
+		name: 'gmd-node',
+		isHidden: true,
+		path: require.resolve(path.join(__dirname, '..', '..', 'GMD-Node.exe'))
+	});
+	gmdNodeLauncher.enable();
+} catch(e){
+	log.error("Cannot autostart "+ JSON.stringify(e));
+};
+
 const killBackend = () => {
 	exec("taskkill /f /im gmd-jvm.exe");
 };
@@ -89,13 +101,32 @@ const createWindow = () => {
 
 	
 	const contextMenu = Menu.buildFromTemplate([
-		{ label: 'Open', click: function() {
-			mainWindow.show();
-		}},
-		{ label: 'Quit', click: function() {
-			app.isQuiting = true;
-			app.quit();
-		} }
+		{ 
+			label: 'Open', 
+			click: function() {
+				mainWindow.show();
+			}
+		},
+		{ 
+			label: 'Refresh', 
+			click: function() {
+				mainWindow.reload();
+			}
+		},
+		{ 
+			label: 'Quit', 
+			click: function() {
+				app.isQuiting = true;
+				app.quit();
+			}
+		},
+		// { 
+		// 	label: 'Autostart', 
+		// 	type: 'checkbox', 
+		// 	checked: true,
+		// 	click: function() {}
+		// }
+		
 	]);
 	tray.setContextMenu(contextMenu);
 	tray.setToolTip("Connected to node: "+ my_url)
