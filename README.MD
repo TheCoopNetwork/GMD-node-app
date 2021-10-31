@@ -23,7 +23,8 @@ Steps:
 
 jlink --add-modules "java.base,java.compiler,java.desktop,java.instrument,java.logging,java.management,java.naming,java.scripting,java.security.jgss,java.sql,java.transaction.xa,java.xml" --output jre-for-gmd
 
-jre-for-gmd\bin\javaw.exe -cp lib\*;conf;CoopNetwork.jar -Dnxt.runtime.dirProvider=nxt.env.DefaultDirProvider nxt.Nxt ```
+jre-for-gmd\bin\javaw.exe -cp lib\*;conf;CoopNetwork.jar -Dnxt.runtime.dirProvider=nxt.env.DefaultDirProvider nxt.Nxt 
+```
 3. npm install
 4. [Optional] To run in dev environment use `npm start`.
 5. To create self extracting installer run `npm run make`. Installer will be created in out/make/...
