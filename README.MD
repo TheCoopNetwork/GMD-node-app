@@ -4,7 +4,7 @@ We are working on version for MacOS as well.
 
 
 
-1. Download the installer file from here: https://node.thecoopnetwork.io:8443/GMD-Node-1.0.0/%20Setup.exe (as alternative this installer can be built using the instructions in the 2nd part of this readme file)
+1. Download the installer file from here: https://node.thecoopnetwork.io:8443/GMD-Node-1.0.0%20Setup.exe (as alternative this installer can be built using the instructions in the 2nd part of this readme file)
 2. Execute installer "GMD-Node-1.0.0 Setup.exe".
 3. Once the installation is finished a shortcut called "GMD-Node" is created in Windows Start Menu, another shortcut on the Desktop and application is set to auto-start on PC start. Also, appliation will start automatically when installation is finished.
 
