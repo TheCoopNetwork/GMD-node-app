@@ -29,7 +29,8 @@ For the moment this only works on Windows. For MacOS work in progress
 Steps:
 1. In this directory create another directory called gmd-node and copy standalone build content in it. Standalone build can be created by compiling https://github.com/CoopNetwork/GMD-blockchain or by downloading it directly from https://node.thecoopnetwork.io:8443/gmd-node-standalone.zip. Files and directories should be directly in "gmd-node" dir (CoopNetwork.jar, start.bat, start.sh, conf, html, lib)
 2. Create custom JRE and copy it to gmd-node, under directory jre-for-gmd (create it).
-``` jdeps -cp lib\*;conf;CoopNetwork.jar --multi-release 9 --ignore-missing-deps --list-deps CoopNetwork.jar
+``` 
+jdeps -cp lib\*;conf;CoopNetwork.jar --multi-release 9 --ignore-missing-deps --list-deps CoopNetwork.jar
    java.base
    java.compiler
    java.desktop
