@@ -116,7 +116,9 @@ const createWindow = () => {
 		{ 
 			label: 'Quit', 
 			click: function() {
-				app.isQuiting = true;
+				log.info('quiting...');	
+				killBackend();
+				app.quitting = true;
 				app.quit();
 			}
 		},
