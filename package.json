@@ -1,7 +1,7 @@
 {
   "name": "gmd-node-app",
   "productName": "GMD-Node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node and wallet for GMD, The Coop Network project",
   "main": "index.js",
   "scripts": {
@@ -11,15 +11,33 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
-  "keywords": [],
+  "keywords": [
+    "gmd",
+    "The Coop Network",
+    "gmd node",
+    "Coop netwrok node",
+    "Geoma Dao",
+    "crypto",
+    "GMD-node"
+  ],
   "author": {
     "name": "The Coop Network"
   },
   "license": "MIT",
+  "bugs": "https://github.com/CoopNetwork/GMD-node-app/issues",
+  "homepage": "https://thecoopnetwork.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoopNetwork/GMD-node-app.git"
+  },
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "logo.ico"
+        "icon": "resources/logo.ico",
+        "ignore": [
+          "gmd-node/jre-for-gmd-mac",
+          ".gitignore"
+        ]
       },
       "makers": [
         {
@@ -27,7 +45,7 @@
           "config": {
             "name": "gmd_node",
             "iconUrl": "https://node.thecoopnetwork.io:8443/img/logo.ico",
-            "loadingGif": "splash.gif"
+            "loadingGif": "resources/splash.gif"
           }
         },
         {
