@@ -45,7 +45,7 @@ waitUntilBackendStarted = async ()=> {
 	while (initFinished == false){
 		log.debug("inside while");
 
-		http.get(my_url, function (res) {
+		http.get(my_url+"/index.html", function (res) {
 			log.info(my_url + " is accessible; creating browser window")			  
 			initFinished = true;
 		}).on('error', async function(e) {
@@ -103,7 +103,7 @@ const createWindow = async () => {
 			app.quit();
 		}
 	)
-
+	log.debug("Loading url now "+my_url);
 	mainWindow.loadURL(my_url);
 };
 
