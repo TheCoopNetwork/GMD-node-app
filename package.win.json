@@ -32,7 +32,6 @@
           ".gitignore",
 		  "gmd-node/windows-download-compiled-node.bat",
           "resources/splash.gif",
-          "resources/logo.ico",
           "package.win.json",
           "package.mac.json"
         ]
