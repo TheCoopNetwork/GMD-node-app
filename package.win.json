@@ -30,7 +30,10 @@
         "ignore": [
           "gmd-node/jre-for-gmd-mac",
           ".gitignore",
-		  "gmd-node/windows-download-compiled-node.bat",
+          "gmd-node/windows-download-compiled-node.bat",
+          "gmd-node/macos-build-custom-jre.sh",
+          "gmd-node/macos-download-compiled-node.sh",
+          "gmd-node/windows-build-custom-jre.bat",
           "resources/splash.gif",
           "package.win.json",
           "package.mac.json"
