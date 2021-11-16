@@ -9,9 +9,20 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "clean": "cd build && node clean.js",
+    "get-dep": "cd build && node gmd-dependencies.js",
+    "clean-build": "npm run clean && npm run get-dep && npm install && npm audit fix && npm run make"
   },
-  "keywords": ["gmd", "The Coop Network", "gmd node", "Coop netwrok node", "Geoma Dao", "crypto", "GMD-node"],
+  "keywords": [
+    "gmd",
+    "The Coop Network",
+    "gmd node",
+    "Coop netwrok node",
+    "Geoma Dao",
+    "crypto",
+    "GMD-node"
+  ],
   "author": {
     "name": "The Coop Network"
   },
@@ -22,18 +33,14 @@
     "type": "git",
     "url": "https://github.com/CoopNetwork/GMD-node-app.git"
   },
-  
   "config": {
     "forge": {
       "packagerConfig": {
         "icon": "resources/logo.ico",
         "ignore": [
           "gmd-node/jre-for-gmd-mac",
+          "./build",
           ".gitignore",
-          "gmd-node/windows-download-compiled-node.bat",
-          "gmd-node/macos-build-custom-jre.sh",
-          "gmd-node/macos-download-compiled-node.sh",
-          "gmd-node/windows-build-custom-jre.bat",
           "resources/splash.gif",
           "package.win.json",
           "package.mac.json"
