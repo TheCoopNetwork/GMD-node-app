@@ -39,8 +39,13 @@
         "icon": "resources/logo.ico",
         "ignore": [
           "gmd-node/jre-for-gmd-mac",
-          "./build",
           ".gitignore",
+          "build/clean.js",
+          "build/gmd-dependencies.js",
+          "build/macos-build-custom-jre.sh",
+          "build/macos-download-compiled-node.sh",
+          "build/windows-build-custom-jre.bat",
+          "build/windows-download-compiled-node.bat",
           "resources/splash.gif",
           "package.win.json",
           "package.mac.json"
