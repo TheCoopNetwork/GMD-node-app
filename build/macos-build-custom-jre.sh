@@ -10,10 +10,10 @@ wget $jdk_url
 tar xzfv "$jdkname.tar.gz"
 jlink=./jdk-17.jdk/Contents/Home/bin/jlink
 #chmod +x $jlink
-$jlink --add-modules "java.base,java.compiler,java.desktop,java.instrument,java.logging,java.management,java.naming,java.scripting,java.security.jgss,java.sql,java.transaction.xa,java.xml" --output ../jre-for-gmd-mac
+$jlink --add-modules "java.base,java.compiler,java.desktop,java.instrument,java.logging,java.management,java.naming,java.scripting,java.security.jgss,java.sql,java.transaction.xa,java.xml" --output ../../gmd-node/jre-for-gmd-mac
 
-cd ../jre-for-gmd-mac/bin
+cd ..
+rm -rf openjdk
+
+cd ../gmd-node/jre-for-gmd-mac/bin
 cp java gmd-jvm
-
-rm -rf ../../openjdk
-

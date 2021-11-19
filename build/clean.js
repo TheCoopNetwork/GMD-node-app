@@ -28,8 +28,3 @@ deleteFolderRecursive(out_dir);
 
 console.log("Successfully cleaned working tree!");
 
-fs.mkdir(gmdnodedir, (err)=> {
-  if(err){
-    console.log("Cannot create folder "+ gmdnodedir);
-  }
-})
