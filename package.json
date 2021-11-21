@@ -12,9 +12,17 @@
     "lint": "echo \"No linting configured\"",
     "clean": "cd build && node clean.js",
     "get-dep": "cd build && node gmd-dependencies.js",
-    "clean-build": "npm run clean; npm run get-dep; npm install; npm audit fix; npm run make"
+    "clean-build": "npm run clean && npm run get-dep && npm install && npm audit fix && npm run make"
   },
-  "keywords": ["gmd", "The Coop Network", "gmd node", "Coop netwrok node", "Geoma Dao", "crypto", "GMD-node"],
+  "keywords": [
+    "gmd",
+    "The Coop Network",
+    "gmd node",
+    "Coop netwrok node",
+    "Geoma Dao",
+    "crypto",
+    "GMD-node"
+  ],
   "author": {
     "name": "The Coop Network"
   },
@@ -25,20 +33,19 @@
     "type": "git",
     "url": "https://github.com/CoopNetwork/GMD-node-app.git"
   },
-  
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "resources/logo.icns",
+        "icon": "resources/logo.ico",
         "ignore": [
-          "gmd-node/jre-for-gmd-win",
+          "gmd-node/jre-for-gmd-mac",
           ".gitignore",
           "build/clean.js",
-		  "build/gmd-dependencies.js",
-		  "build/macos-build-custom-jre.sh",
-		  "build/macos-download-compiled-node.sh",
-		  "build/windows-build-custom-jre.bat",
-		  "build/windows-download-compiled-node.bat",
+          "build/gmd-dependencies.js",
+          "build/macos-build-custom-jre.sh",
+          "build/macos-download-compiled-node.sh",
+          "build/windows-build-custom-jre.bat",
+          "build/windows-download-compiled-node.bat",
           "resources/splash.gif",
           "package.win.json",
           "package.mac.json"
@@ -49,7 +56,7 @@
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "gmd_node",
-            "iconUrl": "https://node.thecoopnetwork.io:8443/img/logo.icns",
+            "iconUrl": "https://node.thecoopnetwork.io:8443/img/logo.ico",
             "loadingGif": "resources/splash.gif"
           }
         },

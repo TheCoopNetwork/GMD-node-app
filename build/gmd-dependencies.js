@@ -16,7 +16,7 @@ let copypackagejson = (src, dst) => {
 var child_process = require('child_process');
 let os = require('os');
 if(os.platform() == 'win32'){
-  copypackagejson('../package.win.json','../package.json');
+  //copypackagejson('../package.win.json','../package.json');
   child_process.execSync('windows-build-custom-jre.bat', function(error, stdout, stderr) {
     console.log("stdout "+stdout);
   });

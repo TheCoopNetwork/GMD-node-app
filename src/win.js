@@ -1,13 +1,21 @@
 const osAbstraction = {};
 const { spawn, execSync } = require('child_process');
 const log = require('electron-log');
+const { dirname } = require('path');
 
 const path = require('path');
 var start_path = path.join(__dirname, '..', 'gmd-node');
 
 
 osAbstraction.getBinPath = ()=>{
-    return require.resolve(path.join(__dirname, '..', '..', 'GMD-Node.exe'));
+    let exe='';
+    log.info('getBinPath dirname='+__dirname);
+    try {
+        exe = require.resolve(path.join(__dirname, '..', '..', '..', 'GMD-Node.exe'));
+    } catch (e) {
+        log.warn('could not find GMD-Node.exe. Needed for to set OS autostart. Error: '+e);
+    }
+    return exe;
 }
 
 osAbstraction.killBackend = () => {
