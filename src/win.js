@@ -1,24 +1,22 @@
 const osAbstraction = {};
 const { spawn, execSync } = require('child_process');
 const log = require('electron-log');
+const { dirname } = require('path');
 
 const path = require('path');
-var start_path = path.join(__dirname, 'gmd-node');
+var start_path = path.join(__dirname, '..', 'gmd-node');
 
 
-osAbstraction.setAutostart = () => {
-    var AutoLaunch = require('auto-launch');
+osAbstraction.getBinPath = ()=>{
+    let exe='';
+    log.info('getBinPath dirname='+__dirname);
     try {
-        var gmdNodeLauncher = new AutoLaunch({
-            name: 'gmd-node',
-            isHidden: true,
-            path: require.resolve(path.join(__dirname, '..', '..', 'GMD-Node.exe'))
-        });
-        gmdNodeLauncher.enable();
-    } catch(e){
-        log.error("Cannot autostart "+ JSON.stringify(e));
-    };
-};
+        exe = require.resolve(path.join(__dirname, '..', '..', '..', 'GMD-Node.exe'));
+    } catch (e) {
+        log.warn('could not find GMD-Node.exe. Needed for to set OS autostart. Error: '+e);
+    }
+    return exe;
+}
 
 osAbstraction.killBackend = () => {
     log.info("Killing backend...");
@@ -45,7 +43,7 @@ osAbstraction.startBackend = () => {
 };
 
 osAbstraction.getLogoFileName = () => {
-    return '/resources/logo.ico';
+    return '../resources/logo.ico';
 }
 
 module.exports = osAbstraction;

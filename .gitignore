@@ -1,2 +1,4 @@
 node_modules
+gmd-node
 out
+.DS_Store

@@ -1,16 +1,16 @@
 @echo off
-
+cd ../gmd-node
 wget https://node.thecoopnetwork.io:8443/gmd-node-standalone.zip
 powershell Expand-Archive gmd-node-standalone.zip
 
 cd gmd-node-standalone\GMD\GMD-2*
-xcopy /s . ..\..\..\
+xcopy /s . ..\..\..\ /Y
 cd ..\..\..
-
 set conffile=.\conf\nxt.properties
 echo %conffile%
 echo nxt.apiServerHost=localhost>%conffile%
 echo nxt.myPlatform=Windows App>>%conffile%
+echo initialized=0>./init
 
 del start.sh
 del start.bat
