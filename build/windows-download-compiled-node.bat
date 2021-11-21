@@ -10,6 +10,7 @@ set conffile=.\conf\nxt.properties
 echo %conffile%
 echo nxt.apiServerHost=localhost>%conffile%
 echo nxt.myPlatform=Windows App>>%conffile%
+echo initialized=0>./init
 
 del start.sh
 del start.bat

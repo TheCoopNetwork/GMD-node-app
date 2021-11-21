@@ -3,7 +3,7 @@
   "productName": "GMD-Node",
   "version": "1.0.1",
   "description": "Node and wallet for GMD, The Coop Network project",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -73,7 +73,9 @@
   "dependencies": {
     "auto-launch": "5.0.5",
     "electron-log": "4.4.1",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "single-instance": "^0.0.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.61",

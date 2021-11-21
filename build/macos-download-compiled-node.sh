@@ -20,3 +20,5 @@ conffile=./conf/nxt.properties
 
 echo nxt.apiServerHost=localhost>$conffile
 echo nxt.myPlatform=MacOS App>>$conffile
+
+echo initialized=0>./init
