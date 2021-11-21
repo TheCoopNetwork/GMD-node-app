@@ -1,4 +1,4 @@
-# GMD Node Windows Application #
+# GMD Node Windows/MacOS Application #
 This is the GMD Node App for Windows x64 and MacOS. It has a simple installer, no dependency and runs both the node and the user interface.
 
 ## Important notes for both Windows and MacOS apps:
@@ -11,6 +11,7 @@ This is the GMD Node App for Windows x64 and MacOS. It has a simple installer, n
    - **Delete the database folder** nxt_db in the path specified in the Windows application notes, respectively MacOS application notes.
    - Wait 10 minutes from the moment node was stopped (This is necessary so the possible 10 minute blacklist wear off)
    - Start the node and wait for blockchain to be downloaded again. Depending on the blockchain length this operation may take 15 to 90 minutes.
+6. To **disable autostart** use System tray menu.
 
   
 
@@ -23,10 +24,9 @@ This is the GMD Node App for Windows x64 and MacOS. It has a simple installer, n
 - ### **Application notes for Windows** version ###
 
   1. **When starting again the app**, use the shortcuts from Start Menu or from the desktop, **do not execute again the one-click installer "GMD-Node-1.0.1 Setup.exe".**
-  2. To **disable autostart** open Task Manager (shortcut Ctrl+Shift+Esc) -> Go to "Startup" tab -> Disable "Update" app published by Github.  
-  3. To **uninstall the node**, use standard Windows approach: Control Panel-> Programs and Features -> Select "GMD Node" -> Uninstall
-  4. **Logs can be found in "%APPDATA%\GMD-Node\logs"** folder.
-  5. Installation directory is "%LOCALAPPDATA%\gmd_node". **If node needs to be reinitialized** delete the database folder found in **"%LOCALAPPDATA%\gmd_node\app-1.0.0\resources\app\gmd-node\nxt_db"**
+  2. To **uninstall the node**, use standard Windows approach: Control Panel-> Programs and Features -> Select "GMD Node" -> Uninstall
+  3. **Logs can be found in "%APPDATA%\GMD-Node\logs"** folder.
+  4. Installation directory is "%LOCALAPPDATA%\gmd_node". **If node needs to be reinitialized** delete the database folder found in **"%LOCALAPPDATA%\gmd_node\app-1.0.0\resources\app\gmd-node\nxt_db"**
    
 
 ## Instructions for MacOS ##
@@ -37,7 +37,7 @@ This is the GMD Node App for Windows x64 and MacOS. It has a simple installer, n
 ### **Application notes for Windows** version ###
 1. To uninstall the node, just delete GMD-Node from Applications directory.
 2. **If node needs to be reinitialized** delete the database folder: **"/Applications/GMD-Node.app/Contents/Resources/app/gmd-node/nxt_db"**
-4. Logs can be found in ~/Library/Logs/GMD-Node/
+3. Logs can be found in ~/Library/Logs/GMD-Node/
 
 
 ## Build instructions:
@@ -48,4 +48,4 @@ This is the GMD Node App for Windows x64 and MacOS. It has a simple installer, n
 This command will download all dependencies, compile and build the installers.  
 Installers will be found in out/make/ directory.
 After first build, application can be run locally for debugging purposes (without a need to execute the installer) by executing 
-`npm start`.
+`npm start`. 
