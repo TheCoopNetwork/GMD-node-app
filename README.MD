@@ -34,7 +34,7 @@ This is the GMD Node App for Windows x64 and MacOS. It has a simple installer, n
 2. Extract contents called GMD-Node
 3. Move GMD-Node to Applications directory.
 
-### **Application notes for Windows** version ###
+### **Application notes for MacOS** version ###
 1. To uninstall the node, just delete GMD-Node from Applications directory.
 2. **If node needs to be reinitialized** delete the database folder: **"/Applications/GMD-Node.app/Contents/Resources/app/gmd-node/nxt_db"**
 3. Logs can be found in ~/Library/Logs/GMD-Node/
