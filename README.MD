@@ -17,20 +17,20 @@ This is the GMD Node App for Windows x64 and MacOS. It has a simple installer, n
 
 ## Instructions for Windows x64 ##
 
-1. Download the installer file from here: https://node.thecoopnetwork.io:8443/GMD-Node-1.0.1%20Setup.exe (as alternative this installer can be built using the instructions in the 2nd part of this readme file)
-2. Execute installer "GMD-Node-1.0.1 Setup.exe".
+1. Download the installer file from here: [GMD-Node-1.0.1-b2 Setup.exe](https://node.thecoopnetwork.io:8443/GMD-Node-1.0.1-b2%20Setup.exe) (as alternative this installer can be built using the instructions in the 2nd part of this readme file)
+2. Execute installer "GMD-Node-1.0.1-b2 Setup.exe".
 3. Once the installation is finished a shortcut called "GMD-Node" is created in Windows Start Menu, another shortcut on the Desktop and application is set to auto-start on PC start. Also, application will start automatically when installation is finished.
 
 - ### **Application notes for Windows** version ###
 
-  1. **When starting again the app**, use the shortcuts from Start Menu or from the desktop, **do not execute again the one-click installer "GMD-Node-1.0.1 Setup.exe".**
+  1. **When starting again the app**, use the shortcuts from Start Menu or from the desktop, **do not execute again the one-click installer "GMD-Node-<version> Setup.exe".**
   2. To **uninstall the node**, use standard Windows approach: Control Panel-> Programs and Features -> Select "GMD Node" -> Uninstall
   3. **Logs can be found in "%APPDATA%\GMD-Node\logs"** folder.
-  4. Installation directory is "%LOCALAPPDATA%\gmd_node". **If node needs to be reinitialized** delete the database folder found in **"%LOCALAPPDATA%\gmd_node\app-1.0.0\resources\app\gmd-node\nxt_db"**
+  4. Installation directory is "%LOCALAPPDATA%\gmd_node". **If node needs to be reinitialized** delete the database folder found in **"%LOCALAPPDATA%\gmd_node\app-<version>\resources\app\gmd-node\nxt_db"**
    
 
 ## Instructions for MacOS ##
-1. Download zip installer: https://node.thecoopnetwork.io:8443/GMD-Node-darwin-x64-1.0.1.zip
+1. Download zip installer: [GMD-Node-darwin-x64-1.0.1-b2.zip](https://node.thecoopnetwork.io:8443/GMD-Node-darwin-x64-1.0.1-b2.zip)
 2. Extract contents called GMD-Node
 3. Move GMD-Node to Applications directory.
 
